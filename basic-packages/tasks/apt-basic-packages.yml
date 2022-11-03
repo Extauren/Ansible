@@ -1,0 +1,10 @@
+- name: Update all packages
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+
+- name: Install basic packages
+  ansible.builtin.apt:
+    pkg:
+    - vim
+    - htop

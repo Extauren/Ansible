@@ -1,0 +1,11 @@
+- name: Upgrade all packages
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+
+- name: Install basic packages
+  ansible.builtin.dnf:
+    name:
+      - vim
+      - htop
+    state: latest
